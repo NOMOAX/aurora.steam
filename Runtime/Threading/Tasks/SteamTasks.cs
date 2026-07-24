@@ -159,11 +159,11 @@ namespace Aurora.Steam.Threading.Tasks
 
             private static void CompleteCanceled(object state)
             {
-                var (callPromiseWithCancellation, cancellationToken) =
+                var (callResultPromiseWithCancellation, cancellationToken) =
                     (Tuple<CallResultPromiseWithCancellation<TResult>, CancellationToken>) state;
-                if (callPromiseWithCancellation.TrySetCanceled(cancellationToken))
+                if (callResultPromiseWithCancellation.TrySetCanceled(cancellationToken))
                 {
-                    callPromiseWithCancellation.CleanUp();
+                    callResultPromiseWithCancellation.CleanUp();
                 }
             }
 
