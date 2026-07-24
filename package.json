@@ -1,0 +1,18 @@
+{
+  "name": "com.kevin-games.aurora.steam",
+  "displayName": "Aurora Steam",
+  "version": "1.0.0",
+  "unity": "2019.4",
+  "description": "Task-based asynchronous pattern (TAP) wrapper for Steamworks async callback model.\n\nDependencies:\n- Steamworks.NET (https://github.com/rlabrecque/Steamworks.NET.git?path=/com.rlabrecque.steamworks.net)",
+  "keywords": [
+    "aurora"
+  ],
+  "dependencies": {
+    "com.rlabrecque.steamworks.net": "2024.8.0"
+  },
+  "author": {
+    "name": "Kevin Games",
+    "email": "844038603@qq.com",
+    "url": "https://gitee.com/kevin-games"
+  }
+}
