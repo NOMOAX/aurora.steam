@@ -7,7 +7,7 @@ using UnityEngine.Assertions;
 namespace Aurora.Steam.Threading.Tasks
 {
     /// <summary>
-    /// 提供一组返回值为 <see cref="Task"/> 或 <see cref="Task{TResult}"/> 的方法。
+    /// 提供一组返回值为 <see cref="Task{TResult}"/> 的方法。
     /// </summary>
     public static class SteamTasks
     {
