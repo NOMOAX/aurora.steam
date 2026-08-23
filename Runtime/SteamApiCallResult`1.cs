@@ -3,32 +3,32 @@
 namespace Aurora.Steam
 {
     /// <summary>
-    /// 封装从 <see cref="CallResult{T}.APIDispatchDelegate"/> 接收到的回调结果。
+    /// Wraps the callback result received from <see cref="CallResult{T}.APIDispatchDelegate"/>.
     /// </summary>
-    /// <typeparam name="TResult">调用 <c>SteamXxx.RequestXxx</c> 方法时，在该方法的文档注释中出现的回调类型。</typeparam>
+    /// <typeparam name="TResult">The callback type that appears in the documentation comment of the <c>SteamXxx.RequestXxx</c> method when it is called.</typeparam>
     public readonly struct SteamApiCallResult<TResult>
     {
         /// <summary>
-        /// Steam 回调结果。
+        /// The Steam callback result.
         /// </summary>
-        /// <remarks>当 <see cref="IOFailure"/> 为 <see langword="true"/> 时无效。</remarks>
+        /// <remarks>Invalid when <see cref="IOFailure"/> is <see langword="true"/>.</remarks>
         public readonly TResult Result;
 
         /// <summary>
-        /// 请求是否因传输层故障而未抵达 Steam 服务器。
+        /// Whether the request failed to reach the Steam server due to a transport-layer failure.
         /// </summary>
         /// <remarks>
-        /// 为 <see langword="true"/> 时，应重试调用 Steam API。
+        /// When <see langword="true"/>, retry the Steam API call.
         /// <br/>
-        /// 可通过 <see cref="SteamUtils.GetAPICallFailureReason"/> 查询详细失败原因（但主要用于调试）。
+        /// Detailed failure reasons can be queried via <see cref="SteamUtils.GetAPICallFailureReason"/> (mainly for debugging).
         /// </remarks>
         public readonly bool IOFailure;
 
         /// <summary>
-        /// 初始化 <see cref="SteamApiCallResult{TResult}"/> 结构的新实例。
+        /// Initializes a new instance of the <see cref="SteamApiCallResult{TResult}"/> structure.
         /// </summary>
-        /// <param name="result">Steam 回调结果。</param>
-        /// <param name="ioFailure">请求是否因传输层故障而未抵达 Steam 服务器。</param>
+        /// <param name="result">The Steam callback result.</param>
+        /// <param name="ioFailure">Whether the request failed to reach the Steam server due to a transport-layer failure.</param>
         public SteamApiCallResult(TResult result, bool ioFailure)
         {
             Result    = result;

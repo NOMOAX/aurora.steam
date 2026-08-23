@@ -7,16 +7,16 @@ using UnityEngine.Assertions;
 namespace Aurora.Steam.Threading.Tasks
 {
     /// <summary>
-    /// 提供一组返回值为 <see cref="Task{TResult}"/> 的方法。
+    /// Provides a set of methods that return <see cref="Task{TResult}"/>.
     /// </summary>
     public static class SteamTasks
     {
         /// <summary>
-        /// 获取一个在指定的 Steam 事件触发时完成的任务。
+        /// Gets a task that completes when the specified Steam event fires.
         /// </summary>
-        /// <param name="cancellationToken">取消令牌。</param>
-        /// <typeparam name="TResult">你想要监听的 Steam 事件回调类型（见 <c>SteamCallbacks.cs</c> 文件）。</typeparam>
-        /// <returns>在 <typeparamref name="TResult"/> 事件触发时完成的任务。</returns>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <typeparam name="TResult">The Steam event callback type you want to listen for (see the <c>SteamCallbacks.cs</c> file).</typeparam>
+        /// <returns>The task that completes when the <typeparamref name="TResult"/> event fires.</returns>
         public static Task<TResult> WhenCallback<TResult>(CancellationToken cancellationToken = default)
             where TResult : struct
         {
@@ -91,12 +91,12 @@ namespace Aurora.Steam.Threading.Tasks
         }
 
         /// <summary>
-        /// 获取一个在指定的 Steam API 调用结果返回时完成的任务。
+        /// Gets a task that completes when the specified Steam API call result returns.
         /// </summary>
-        /// <param name="call">各种 <c>SteamXxx.RequestXxx</c> 方法返回的 Steam API 调用句柄。</param>
-        /// <param name="cancellationToken">取消令牌。</param>
-        /// <typeparam name="TResult">对应 Steam API 方法的回调结果类型（在 <c>SteamXxx.RequestXxx</c> 方法的文档注释里）。</typeparam>
-        /// <returns>在指定的 Steam API 调用结果返回时完成的任务。</returns>
+        /// <param name="call">The Steam API call handle returned by various <c>SteamXxx.RequestXxx</c> methods.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <typeparam name="TResult">The callback result type of the corresponding Steam API method (in the documentation comment of the <c>SteamXxx.RequestXxx</c> method).</typeparam>
+        /// <returns>The task that completes when the specified Steam API call result returns.</returns>
         public static Task<SteamApiCallResult<TResult>> WhenCallResult<TResult>(
             SteamAPICall_t    call,
             CancellationToken cancellationToken = default)
