@@ -1,7 +1,7 @@
 # Aurora Steam
 
 ![许可](https://img.shields.io/github/license/NOMOAX/aurora.steam)
-![版本](https://img.shields.io/badge/version-1.0.3-blue)
+![版本](https://img.shields.io/badge/version-1.0.4-blue)
 ![最低 Unity 版本](https://img.shields.io/badge/Unity-2019.4%2B-blue)
 
 Steamworks.NET 异步回调模型的基于任务的异步模式（TAP）封装。

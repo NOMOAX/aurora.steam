@@ -1,7 +1,7 @@
 # Aurora Steam
 
 ![license](https://img.shields.io/github/license/NOMOAX/aurora.steam)
-![version](https://img.shields.io/badge/version-1.0.3-blue)
+![version](https://img.shields.io/badge/version-1.0.4-blue)
 ![lowest Unity version](https://img.shields.io/badge/Unity-2019.4%2B-blue)
 
 Task-based asynchronous pattern (TAP) wrapper for Steamworks.NET's async callback model.
